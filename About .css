@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  color: #333;
+}
+.navbar {
+  
+  padding: 0px 0px;
+  display: flex;
+  justify-content: right;
+  
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration:none;
+  color: white;
+  
+}
+
+.navbar a:hover {
+  color:brown;
+  text-decoration: none;
+}
+
+
+.about-header {
+  background:rgb(255, 165, 0);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 30px;
+  background: #f9f9f9;
+}
+h2{
+    text-align: center;
+    margin-top: 10PX;
+    color: brown;
+}
+h2:hover {
+  transition: all 0.3s ease;
+  transform: translateY(-5px);
+  text-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+h2 span {
+  display: inline-block;
+  background: linear-gradient(to right, rgba(255,255,255,0.5), transparent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.5s;
+}
+h2:hover span {
+  background-position: 100%;
+}
+
+p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+p{
+  
+  opacity: 0;
+  animation: slideIn 1.5s forwards ease-out;
+}
+
+@keyframes slideIn {
+  50% {
+    opacity: 1;
+    transform: translateX(20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+
+
+P{
+    text-align: center;
+    padding-top: 10px;
+    color: black;
+}
+
+.image-container {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.badge {
+  position: absolute;
+  background-color: white;
+  color: #e91e63;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.badge span {
+  font-size: 12px;
+  color: #555;
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.text-container {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.text-container h2 {
+  font-size: 28px;
+  color:brown;
+  margin-bottom: 15px;
+}
+
+.text-container p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.learn {
+  background-color: #e91e63;
+  color: white;
+}
+
+.demo {
+  border: 2px solid #e91e63;
+  color: #e91e63;
+}
