@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant</title>
+  <link rel="stylesheet" href="Home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Explore Foods.html">Explore Foods</a></li>
+        <li><a href="Contacts Us.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section class="hero">
+    <div class="hero-text">
+      <h2><span class="highlight">Fresh and delicious</span></h2>
+      <h1>RESTAURANT</h1>
+      <p>Welcome to FUN TO FOOD Delicious Restaurant. The food here is fresh and delicious, and the price is favorable. You are welcome to taste it.</p>
+      <a href="About Us.html" class="btn">LEARN MORE</a>
+      <a href="Explore Foods.html" class="btn">ORDER NOW</a>
+      
+    </div>
+  </section>
+  <script>
+  $(document).ready(function() {
+    $('nav a[href^="#index.html"]').on('click', function(e) {
+    e.preventDefault();
+    const target = $($.attr(this, 'href'));
+    if (target.length) {
+      $('html, body').animate({ scrollTop: target.offset().top - 60 }, 800);
+    }
+  });
+
+  // 2. Animate hero text on load
+  $('.hero-text h2, .hero-text h1, .hero-text p').css({ opacity: 0, transform: 'translateY(30px)' })
+    .each(function(i) {
+      $(this).delay(400 * i).animate({ opacity: 1, transform: 'translateY(0)' }, 600);
+    });
+
+  // 3. Button hover style toggle
+ /* $('.btn').hover(
+    function() { $(this).css({ background: '#d39121', color: '#fff' }); },
+    function() { $(this).css({ background: '', color: '' }); }
+  );*/
+
+  // 4. Navbar background toggle on scroll
+  $(window).on('scroll', function() {
+    if ($(this).scrollTop() > 100) {
+      $('.navbar').addClass('scrolled');
+    } else {
+      $('.navbar').removeClass('scrolled');
+    }
+  });
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

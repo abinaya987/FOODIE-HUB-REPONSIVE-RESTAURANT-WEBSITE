@@ -1,0 +1,110 @@
+body {
+      background: linear-gradient(to right, #fff4e6, #ffe0b2);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ====== NAVBAR ====== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #e65100;
+      z-index: 1000;
+      padding: 0.7rem 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ffd180;
+    }
+
+    header {
+      margin-bottom: 100px;
+    }
+
+    /* ====== SEARCH SECTION ====== */
+    .search-bar {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .search-bar:focus {
+      outline: none;
+      border-color: #ff9800;
+      box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+    }
+
+    .nav-btn {
+      background-color: #ff6f00;
+      border: none;
+    }
+
+    .nav-btn:hover {
+      background-color: #ff8f00;
+    }
+
+    /* ====== TABS ====== */
+    .tab-btn {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ef6c00;
+      color: white;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .tab-btn:hover {
+      background-color: #ff9800;
+    }
+
+    /* ====== CARDS ====== */
+    .card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff8f0;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid #ffcc80;
+    }
+
+    .card-body {
+      text-align: left;
+    }
+
+    h2 {
+      font-weight: bold;
+      color: #bf360c;
+      margin-bottom: 20px;
+    }

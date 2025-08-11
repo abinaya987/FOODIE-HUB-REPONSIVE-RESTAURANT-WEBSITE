@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Items</title>
+    <link rel="stylesheet" href="foods.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Login.html">Login</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Explore Foods.html">Explore Foods</a></li>
+      <li><a href="Contacts Us.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container py-3 d-flex justify-content-between align-items-center">
+  <img src="food logo.jpg" alt="Logo" width="100" height="100">
+  <input type="text" id="searchInput" class="search-bar mx-3" placeholder="Search Recipes...">
+  <button class="btn btn-primary nav-btn" onclick="searchRecipes()">Search</button>
+</div>
+
+<div class="text-center mt-4">
+  <h2>Explore Recipes</h2>
+</div>
+
+<div class="container text-center mb-4">
+  <button class="tab-btn" onclick="filterItems('all')">All-Items</button>
+  <button class="tab-btn" onclick="filterItems('chicken')">Chicken</button>
+  <button class="tab-btn" onclick="filterItems('paneer')">Paneer</button>
+  <button class="tab-btn" onclick="filterItems('fish')">Fish</button>
+  <button class="tab-btn" onclick="filterItems('veg')">Veg</button>
+  <button class="tab-btn" onclick="filterItems('pasta')">Pasta</button>
+  <button class="tab-btn" onclick="filterItems('dosa')">Dosa</button>
+
+</div>
+
+<div class="container">
+  <div class="row g-4" id="cardContainer">
+    <!-- REPEATABLE CARD COMPONENT -->
+    <div class="col-md-4" data-name="pan-fried perch" data-category="fish">
+      <div class="card">
+        <img src="food 1.jpg" class="card-img-top" alt="Pan-fried perch">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">pan-fried perch time:15-20 minutes | Serves: 1 $200.50</p>
+          <a href="fish food.html" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-name="Paneer Tikka Fry" data-category="paneer">
+      <div class="card">
+        <img src="food2.jpg" class="card-img-top" alt="Paneer Tikka Fry">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">Paneer Tikka Fry time:20-30 minutes | Serves: 1 $199.50</p>
+          <a href="paneer.html" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-name="Masala Fish Steak" data-category="fish">
+      <div class="card">
+        <img src="food3.webp" class="card-img-top" alt="Masala Fish Steak">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">Masala Fish Steak time:25-35 minutes | Serves: 1 $350.50</p>
+          <a href="Masala Fish.html" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-name="Chicken Tawa Fry" data-category="chicken">
+      <div class="card">
+        <img src="food5.jpg" class="card-img-top" alt="Chicken Tawa Fry">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">Chicken Tawa Fry time:15-20 minutes | Serves: 1 $230.50</p>
+          <a href="#" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-name="Chicken Tortilla Soup" data-category="chicken">
+      <div class="card">
+        <img src="food7.jpg" class="card-img-top" alt="Chicken Tortilla Soup">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">Chicken Tortilla Soup time:10-15 minutes | Serves: 1 $150.50</p>
+          <a href="#" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-name="Masala Egg Dosa" data-category="dosa">
+      <div class="card">
+        <img src="food6.jpg" class="card-img-top" alt="Masala Egg Dosa">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">Masala Egg Dosa time:15-20 minutes | Serves: 1 $100.50</p>
+          <a href="#" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-name="Paneer Tawa Fry" data-category="paneer">
+      <div class="card">
+        <img src="food4.jpg" class="card-img-top" alt="Paneer Tawa Fry">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">Paneer Tawa Fry time:20-25 minutes | Serves: 1 $280.50</p>
+          <a href="#" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-name="Dindigul veg Biriyani" data-category="veg">
+      <div class="card">
+        <img src="food8.jpg" class="card-img-top" alt="Dindigul veg Biriyani">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">Dindigul Veg Biriyani time:30-40 minutes | Serves: 2 $300.50</p>
+          <a href="#" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-name="Macaroni Pasta Fry" data-category="pasta">
+      <div class="card">
+        <img src="food9.jpg" class="card-img-top" alt="Macaroni Pasta Fry">
+        <div class="card-body">
+          <h5 class="card-title">F2F</h5>
+          <p class="card-text">Macaroni Pasta Fry time:15-20 minutes | Serves: 1 $260.50</p>
+          <a href="#" class="btn btn-primary">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script>
+  function searchRecipes() {
+    const value = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll("#cardContainer .col-md-4");
+    cards.forEach(card => {
+      const name = card.getAttribute("data-name").toLowerCase();
+      card.style.display = name.includes(value) ? "block" : "none";
+    });
+  }
+
+  function filterItems(category) {
+    const cards = document.querySelectorAll("#cardContainer .col-md-4");
+    cards.forEach(card => {
+      const cat = card.getAttribute("data-category").toLowerCase();
+      card.style.display = category === 'all' || cat === category ? "block" : "none";
+    });
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
